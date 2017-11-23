@@ -31,5 +31,35 @@ export default {
         resolve()
       }, 1000)
     })
-  }
+  },
+
+  // GET /api/<resourceName>
+  fetchList({ commit }, { config } = {}) {
+    // ...
+  },
+ 
+  // GET /api/<resourceName>/:id
+  fetchSingle({ commit }, { id, config } = {}) {
+    // ...
+  },
+ 
+  // POST /api/<resourceName>
+  create({ commit }, { data, config } = {}) {
+    // ...
+  },
+ 
+  // PATCH /api/<resouceName>/:id
+  update({ commit }, { id, data, config } = {}) {
+    // ...
+  },
+ 
+  // PUT /api/<resouceName>/:id
+  replace({ commit }, { id, data, config } = {}) {
+    // ...
+  },
+ 
+  // DELETE /api/<resouceName>/:id
+  destroy({ commit }, { id, config } = {}) {
+    // ...
+  },
 };
