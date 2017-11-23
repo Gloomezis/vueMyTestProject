@@ -23,7 +23,6 @@
     computed: mapGetters({
       evenOrOdd: types.EVEN_OR_ODD
     }),
-    //store.$dispatch('nameActions', someData)
     methods: mapActions({
       increment: types.COUNTER_INCREMENT,
       decrement: types.COUNTER_DECREMENT,

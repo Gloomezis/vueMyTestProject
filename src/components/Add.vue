@@ -60,6 +60,7 @@
       }
     },
     methods: {
+
       addCustomer (e) {
         if (!this.customer.first_name || !this.customer.last_name || !this.customer.email) {
           this.alert = 'Please fill in all required fields'
@@ -73,12 +74,12 @@
             city: this.customer.city,
             state: this.customer.state
           }
-
-          this.$http.post('http://slimapp/api/customer/add', newCustomer)
-            .then(function (response) {
-              this.$router.push({path: '/', query: {alert: 'Customer Added'}})
-            })
-
+          
+          this.$store.dispatch(types.ADD_CUSTOMER, newCustomer)
+          .then(() =>
+              this.$router.push({path: '/', query: {alert: 'Customer '+ this.customer.first_name +' Added'}})
+            )
+         
           e.preventDefault()
         }
         e.preventDefault()

@@ -5,6 +5,7 @@ import Counter from '../components/Counter'
 import About from '../components/About'
 import Add from '../components/Add'
 import Edit from '../components/Edit'
+import Home from '../components/Home'
 import CustomerDetails from '../components/CustomerDetails'
 import Logos from '@/components/Logos'
 
@@ -18,7 +19,8 @@ export default new Router({
   base: __dirname,
   routes: [
     {path: '/counter', name: 'Counter', component: Counter},
-    {path: '/', component: Customers},
+    {path: '/home', component: Home},
+    {path: '/', component: Customers},    
     {path: '/about', component: About},
     {path: '/add', component: Add},
     {path: '/customer/:id', component: CustomerDetails},

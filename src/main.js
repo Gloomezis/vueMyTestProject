@@ -29,9 +29,10 @@ new Vue({
         </div>
         <div id="navbar" class="collapse navbar-collapse">
           <ul class="nav navbar-nav">
-            <li><router-link to="/">Home</router-link></li>
+            <li><router-link to="/">User list</router-link></li>
             <li><router-link to="/about">About</router-link></li>
             <li><router-link to="/logos">Logos</router-link></li>
+            <li><router-link to="/home">Home</router-link></li>
 
           </ul>
           <ul class="nav navbar-nav navbar-right">

@@ -14,7 +14,8 @@
       </tr>
       </thead>
       <tbody>
-      <tr v-for="customer in filterBy(customers, filterInput)">
+       
+      <tr v-for="customer in filterBy(customers, filterInput)" :key="customer.phone">
         <td>{{customer.first_name}}</td>
         <td>{{customer.last_name}}</td>
         <td>{{customer.email}}</td>
@@ -43,14 +44,12 @@
     },
     methods: {
       fetchCustomers () {
-        this.$http.get('http://slimapp/api/customers')
-          .then(function (response) {
-            this.customers = response.body
-          })
+        this.customers =  this.$store.getters.FETCH_CUSTOMERS;
       },
       filterBy (list, value) {
         value = value.charAt(0).toUpperCase() + value.slice(1)
-        return list.filter(function (customer) {
+        if(!list) return [];
+        return list.filter(customer => {
           return customer.last_name.indexOf(value) > -1
         })
       }
