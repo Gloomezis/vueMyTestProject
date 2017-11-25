@@ -10,11 +10,20 @@ Vue.use(Vuex)
 
 const state = {
   count: 0 ,
-  customer_count_id: 1,
+  customer_count_id: 2,
   customers: [
-    { id: 1,
+    { id: 0,
       first_name: 'Nicko',
       last_name: 'Bow',
+      phone: '+375333333333',
+      email: 'someEmail@mail.ru',
+      address: 'some street 50',
+      city: 'some city',
+      state: 'some state'
+    },
+    { id: 1,
+      first_name: 'Pavel',
+      last_name: 'Some',
       phone: '+375333333333',
       email: 'someEmail@mail.ru',
       address: 'some street 50',

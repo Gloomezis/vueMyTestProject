@@ -7,12 +7,9 @@ export  default {
   FETCH_CUSTOMERS: state => state.customers ,
   // fetchCustomers
   // byId(id) returns resource by ID
-  FETCH_CUSTOMER: (state, id) => {
-    
+  
+  FETCH_CUSTOMER: (state, getters) => (id) => {
+    return state.customers.find(customer =>  customer.id == id);
   }
-
-  
- 
-  
  
 };

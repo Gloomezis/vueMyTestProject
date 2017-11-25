@@ -1,6 +1,5 @@
 //Getters
 export const EVEN_OR_ODD = 'counter/EVEN_OR_ODD';
-export const FETCH_CUSTOMERS = 'customers/FETCH_CUSTOMERS'
 
 //Mutations
 export const MUTATE_INCREMENT_COUNTER = 'counter/MUTATE_INCREMENT_COUNTER';
