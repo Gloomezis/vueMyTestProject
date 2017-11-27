@@ -48,12 +48,12 @@
         this.customer = this.$store.getters.FETCH_CUSTOMER(this.$route.params.id);
        
       },
-      // deleteCustomer (id) {
-      //   this.$http.delete('http://slimapp/api/customer/delete/' + id)
-      //     .then(function (response) {
-      //       this.$router.push({path: '/', query: {alert: 'Customer Deleted'}})
-      //     })
-      // }
+      deleteCustomer (id) {
+        this.$store.dispatch(types.DELETE_CUSTOMER, id)
+          .then(() =>
+              this.$router.push({path: '/', query: {alert: 'Customer '+ this.customer.first_name +' deleted'}})
+            )
+      }
     },
     created: function () {
       this.fetchCustomer();

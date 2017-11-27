@@ -25,7 +25,7 @@ new Vue({
             <span class="icon-bar"></span>
             <span class="icon-bar"></span>
           </button>
-          <a class="navbar-brand" href="/counter">Counter</a>
+          <router-link class="navbar-brand" to="/counter">Counter</router-link>
         </div>
         <div id="navbar" class="collapse navbar-collapse">
           <ul class="nav navbar-nav">

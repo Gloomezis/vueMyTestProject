@@ -13,10 +13,9 @@ export default {
       }, 1000)
     })
   },
-  deleteCustomer: ({commit}) => commit(),
-  updateCustomer : ({commit}) => commit(),
+  [types.DELETE_CUSTOMER]: ({commit}, id) => commit(types.MUTATE_DELETE_CUSTOMER, id),
+  [types.UPDATE_CUSTOMER] : ({commit}, updatedCustomer) => commit(types.MUTATE_UPDATE_CUSTOMER, updatedCustomer),
 
-  
   [types.COUNTER_INCREMENT]: ({ commit }) => commit(types.MUTATE_INCREMENT_COUNTER),
   [types.COUNTER_DECREMENT]: ({ commit }) => commit(types.MUTATE_DECREMENT_COUNTER),
   [types.COUNTER_INCREMENT_IF_ODD]: ({commit, state}) => {

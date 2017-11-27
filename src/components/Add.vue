@@ -78,7 +78,9 @@
           this.$store.dispatch(types.ADD_CUSTOMER, newCustomer)
           .then(() =>
               this.$router.push({path: '/', query: {alert: 'Customer '+ this.customer.first_name +' Added'}})
-            )
+            ).catch(function() {
+              // display error, not related to Vuex
+            })
          
           e.preventDefault()
         }

@@ -61,10 +61,7 @@
     },
     methods: {
       fetchCustomer (id) {
-        this.$http.get('http://slimapp/api/customer/' + id)
-          .then(function (response) {
-            this.customer = response.body
-          })
+         this.customer = this.$store.getters.FETCH_CUSTOMER(id);
       },
       updateCustomer (e) {
         if (!this.customer.first_name || !this.customer.last_name || !this.customer.email) {
@@ -80,10 +77,10 @@
             state: this.customer.state
           }
 
-          this.$http.put('http://slimapp/api/customer/update/' + this.$route.params.id, updCustomer)
-            .then(function (response) {
-              this.$router.push({path: '/', query: {alert: 'Customer Updated'}})
-            })
+         this.$store.dispatch(types.UPDATE_CUSTOMER, updCustomer)
+          .then(() =>
+              this.$router.push({path: '/', query: {alert: 'Customer '+ this.customer.first_name +' updated'}})
+            )
 
           e.preventDefault()
         }
