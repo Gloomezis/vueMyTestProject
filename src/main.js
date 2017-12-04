@@ -5,6 +5,7 @@ import Vue from 'vue'
 import router from './router'
 import VueResource from 'vue-resource'
 import store from './store/store'
+import  './commons/filters/filters.js'
 
 Vue.use(VueResource)
 

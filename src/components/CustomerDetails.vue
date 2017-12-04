@@ -1,7 +1,7 @@
 <template>
   <div class="details container" v-if="customer">
     <router-link to="/">Back</router-link>
-      <h1 class="page-header">{{customer.first_name}} {{customer.last_name}}
+      <h1 class="page-header">{{customer.first_name | readMore(2, '...')}} {{customer.last_name}}
         <span class="pull-right">
               <router-link class="btn btn-primary" v-bind:to="'/edit/'+customer.id">Edit</router-link>
               <button class="btn btn-danger" v-on:click="deleteCustomer(customer.id)">Delete</button>
