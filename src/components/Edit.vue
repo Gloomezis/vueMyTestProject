@@ -13,6 +13,10 @@
           <label>Last Name</label>
           <input type="text" class="form-control" placeholder="Last Name" v-model="customer.last_name">
         </div>
+        <div class="form-group">
+          <label>Age</label>
+          <input type="number" class="form-control" placeholder="Age" v-model.number="customer.age" >
+        </div>
       </div>
       <div class="well">
         <h4>Customer Contact</h4>
@@ -70,6 +74,7 @@
           let updCustomer = {
             first_name: this.customer.first_name,
             last_name: this.customer.last_name,
+            age: this.customer.age,
             phone: this.customer.phone,
             email: this.customer.email,
             address: this.customer.address,

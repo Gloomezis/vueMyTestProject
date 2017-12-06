@@ -34,6 +34,9 @@ new Vue({
             <li><router-link to="/about">About</router-link></li>
             <li><router-link to="/logos">Logos</router-link></li>
             <li><router-link to="/home">Home</router-link></li>
+            <li><router-link to="/quiz">Quiz</router-link></li>
+            <li><router-link to="/maps">Map</router-link></li>
+            <li><router-link to="/secondmaps">SecondMap</router-link></li>
 
           </ul>
           <ul class="nav navbar-nav navbar-right">

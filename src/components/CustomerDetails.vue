@@ -8,6 +8,10 @@
               </span>
       </h1>
       <ul class="list-group">
+        <li class="list-group-item">Age: {{customer.age}} </li>
+      </ul>
+
+      <ul class="list-group">
         <li class="list-group-item"><span class="glyphicon glyphicon-phone" aria-hidden="true"></span> {{customer.phone}}
         </li>
         <li class="list-group-item"><span class="glyphicon glyphicon-envelope" aria-hidden="true"></span> {{customer.email}}
@@ -15,9 +19,9 @@
       </ul>
 
       <ul class="list-group">
-        <li class="list-group-item"> {{customer.address}}</li>
-        <li class="list-group-item">{{customer.city}}</li>
-        <li class="list-group-item">{{customer.state}}</li>
+        <li class="list-group-item">Adress: {{customer.address}}</li>
+        <li class="list-group-item">City: {{customer.city}}</li>
+        <li class="list-group-item">State: {{customer.state}}</li>
       </ul>
   </div>
 </template>

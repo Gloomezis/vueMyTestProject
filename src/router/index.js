@@ -8,6 +8,9 @@ import Edit from '../components/Edit'
 import Home from '../components/Home'
 import CustomerDetails from '../components/CustomerDetails'
 import Logos from '@/components/Logos'
+import Quiz from '../components/quiz/Quiz'
+import Maps from '../components/maps/MapsRoot'
+import SecondMaps from '../components/maps/SecondMaps'
 
 
 
@@ -26,5 +29,8 @@ export default new Router({
     {path: '/customer/:id', component: CustomerDetails},
     {path: '/edit/:id', component: Edit},
     {path: '/logos', component: Logos},
+    {path: '/quiz', component: Quiz},
+    {path: '/maps', component: Maps},
+    {path: '/secondmaps', component: SecondMaps}
   ]
 })

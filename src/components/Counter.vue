@@ -29,10 +29,9 @@
       incrementIfOdd:types.COUNTER_INCREMENT_IF_ODD,
       incrementAsync: types.COUNTER_INCREMENT_ASYNC
     }),
-
     data () {
       return {
-        msg: 'Welcome to Your Vue.js App'
+        msg: 'Welcome to Your Vue.js App',
       }
     }
 }
